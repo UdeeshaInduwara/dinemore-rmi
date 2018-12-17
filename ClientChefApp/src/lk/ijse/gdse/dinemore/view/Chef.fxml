@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="464.0" prefWidth="965.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.dinemore.controller.ChefFormController">
+   <children>
+      <TableView fx:id="tblPendingOrders" layoutX="14.0" layoutY="49.0" onMouseClicked="#selectToShowFoods" prefHeight="164.0" prefWidth="765.0">
+         <columns>
+            <TableColumn prefWidth="69.0" text="Order ID" />
+            <TableColumn prefWidth="130.0" text="Order Type" />
+            <TableColumn prefWidth="128.0" text="Order Date &amp; Time" />
+            <TableColumn prefWidth="105.0" text="Order Status" />
+            <TableColumn prefWidth="124.0" text="Cooking Start Time" />
+            <TableColumn prefWidth="115.0" text="Cooking End Time" />
+            <TableColumn prefWidth="89.0" text="Chef" />
+         </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="13.0" prefHeight="30.0" prefWidth="163.0" text="Pending Orders" />
+      <JFXButton buttonType="RAISED" layoutX="719.0" layoutY="226.0" onAction="#selectOrder" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #F62459;" text="Select Order" textFill="WHITE" />
+      <TableView fx:id="tblSelectedOrder" layoutX="14.0" layoutY="283.0" prefHeight="107.0" prefWidth="936.0">
+         <columns>
+            <TableColumn prefWidth="102.0" text="Order ID" />
+            <TableColumn prefWidth="154.0" text="Order Type" />
+            <TableColumn prefWidth="129.0" text="Order Date &amp; Time" />
+            <TableColumn prefWidth="122.0" text="Order Status" />
+            <TableColumn prefWidth="134.0" text="Cooking Start Time" />
+            <TableColumn prefWidth="129.0" text="Cooking End Time" />
+            <TableColumn prefWidth="160.0" text="Chef" />
+         </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="247.0" prefHeight="30.0" prefWidth="163.0" text="Selected Orders" />
+      <JFXButton buttonType="RAISED" layoutX="719.0" layoutY="405.0" onAction="#finishOrder" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #22a7f0;" text="Finish Order" textFill="WHITE" />
+      <Label fx:id="lblTime" layoutX="446.0" layoutY="13.0" prefHeight="30.0" prefWidth="119.0" text="Time" />
+      <JFXListView fx:id="listFood" layoutX="789.0" layoutY="49.0" prefHeight="164.0" prefWidth="163.0" />
+      <JFXComboBox fx:id="cmbChefId" layoutX="699.0" layoutY="16.0" prefHeight="25.0" prefWidth="107.0" promptText="Chef ID" />
+      <JFXPasswordField fx:id="txtChefPw" layoutX="823.0" layoutY="16.0" prefHeight="25.0" prefWidth="128.0" promptText="Password" />
+      <Label fx:id="lblDate" layoutX="571.0" layoutY="13.0" prefHeight="30.0" prefWidth="119.0" text="Date" />
+   </children>
+</AnchorPane>

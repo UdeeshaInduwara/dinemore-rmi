@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="344.0" prefWidth="1322.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.dinemore.controller.OrderDetailFormController">
+   <children>
+      <TableView fx:id="tblReservedOrders" layoutX="13.0" layoutY="47.0" prefHeight="271.0" prefWidth="1297.0">
+         <columns>
+            <TableColumn prefWidth="64.0" text="Order ID" />
+            <TableColumn prefWidth="84.0" text="Order Type" />
+            <TableColumn prefWidth="129.0" text="Order Date &amp; Time" />
+            <TableColumn prefWidth="85.0" text="Order Status" />
+            <TableColumn prefWidth="101.0" text="Payment Status" />
+            <TableColumn prefWidth="109.0" text="Reception" />
+            <TableColumn prefWidth="99.0" text="Chef" />
+            <TableColumn prefWidth="102.0" text="Deliver Boy" />
+            <TableColumn prefWidth="105.0" text="Customer" />
+            <TableColumn prefWidth="106.0" text="Cooking Start" />
+            <TableColumn prefWidth="111.0" text="Cooking End" />
+            <TableColumn prefWidth="101.0" text="Deliver Start" />
+            <TableColumn prefWidth="95.0" text="Deliver End" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1189.0" layoutY="14.0" onAction="#printReport" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #2C3E50;" text="Print Report" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-11-20T10:44:15 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BestCustomerOfMonth" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21aaab97-06ab-4902-95a6-2f2e5d2dc6ca">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Dinemore"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select c.name as customer,count(o.orderid) as orderCount from orders o,customer c where o.customer_custId=c.custid and month(o.orderDateTime)=month(curdate()) and year(o.orderDateTime)=year(curdate()) group by c.custId order by orderCount desc]]>
+	</queryString>
+	<field name="customer" class="java.lang.String"/>
+	<field name="orderCount" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="11" width="280" height="30" uuid="04958835-14be-49ce-9cb9-5eb89d9db20a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Best Customers of the Current Month]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="278" height="20" uuid="c2eb8e52-ce34-40c6-b449-49323e4c13cb"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="277" height="20" uuid="38a2f376-35dd-45ea-b3b1-1ce805994c17"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[orderCount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="7" width="278" height="30" uuid="5f0ae5ae-6fbe-4da2-bf7e-10ff9e928dcd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{customer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="7" width="277" height="30" uuid="e6f47bb6-2a35-4af0-a12b-0e5a0b0dc9af"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{orderCount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

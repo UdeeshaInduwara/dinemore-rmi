@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="584.0" prefWidth="1182.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.dinemore.controller.ReceptionFormController">
+   <children>
+      <TableView fx:id="tblFood" layoutX="14.0" layoutY="72.0" onMouseClicked="#addFoodToOrderedFoodTbl" prefHeight="313.0" prefWidth="348.0">
+        <columns>
+            <TableColumn prefWidth="85.99996948242188" text="Food ID" />
+          <TableColumn prefWidth="139.0" text="Food Name" />
+          <TableColumn prefWidth="118.0" text="Price" />
+        </columns>
+      </TableView>
+      <Separator layoutX="376.0" layoutY="54.0" orientation="VERTICAL" prefHeight="339.0" prefWidth="6.0" />
+      <TableView fx:id="tblCustomer" layoutX="393.0" layoutY="111.0" onMouseClicked="#selectCustomer" prefHeight="192.0" prefWidth="415.0">
+        <columns>
+            <TableColumn text="Customer ID" />
+          <TableColumn prefWidth="98.0" text="Customer Name" />
+            <TableColumn prefWidth="105.0" text="Contact No" />
+          <TableColumn prefWidth="123.0" text="Address" />
+        </columns>
+      </TableView>
+      <TextField layoutX="393.0" layoutY="72.0" prefHeight="25.0" prefWidth="415.0" promptText="Search Customer" />
+      <JFXTextField fx:id="txtCustomerId" labelFloat="true" layoutX="393.0" layoutY="319.0" prefHeight="25.0" prefWidth="195.0" promptText="Customer ID" />
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="613.0" layoutY="319.0" prefHeight="25.0" prefWidth="195.0" promptText="Customer Name" />
+      <JFXTextField fx:id="txtCustomerContactNo" labelFloat="true" layoutX="393.0" layoutY="359.0" prefHeight="25.0" prefWidth="195.0" promptText="Contact No" />
+      <Separator layoutX="828.0" layoutY="14.0" orientation="VERTICAL" prefHeight="383.0" prefWidth="6.0" />
+      <TableView fx:id="tblOrderedFood" layoutX="848.0" layoutY="14.0" onMouseClicked="#deSelectFood" prefHeight="272.0" prefWidth="320.0">
+        <columns>
+            <TableColumn prefWidth="78.0" text="ID" />
+          <TableColumn prefWidth="125.0" text="Food" />
+          <TableColumn prefWidth="111.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXRadioButton fx:id="rbtnTakeAway" layoutX="844.0" layoutY="369.0" selected="true" text="Take Away">
+         <toggleGroup>
+            <ToggleGroup fx:id="orderType" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="rbtnDelivery" layoutX="942.0" layoutY="369.0" text="Delivery" toggleGroup="$orderType" />
+      <Label layoutX="855.0" layoutY="299.0" prefHeight="25.0" prefWidth="77.0" text="Total" />
+      <TextField fx:id="txtFoodPriceTotal" editable="false" layoutX="945.0" layoutY="300.0" prefHeight="25.0" prefWidth="223.0" />
+      <JFXButton buttonType="RAISED" layoutX="1055.0" layoutY="365.0" onAction="#placeOrder" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #F62459;" text="Submit Order" textFill="WHITE" />
+      <Label fx:id="lblTime" layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="100.0" text="Time" />
+      <Label fx:id="lblDate" layoutX="151.0" layoutY="21.0" prefHeight="25.0" prefWidth="100.0" text="Date" />
+      <Separator layoutX="14.0" layoutY="53.0" prefHeight="5.0" prefWidth="792.0" />
+      <TableView fx:id="tblReservedOrders" layoutX="16.0" layoutY="402.0" prefHeight="164.0" prefWidth="1152.0">
+         <columns>
+            <TableColumn prefWidth="64.0" text="Order ID" />
+            <TableColumn prefWidth="79.0" text="Order Type" />
+            <TableColumn prefWidth="164.0" text="Order Date &amp; Time" />
+            <TableColumn prefWidth="112.0" text="Order Status" />
+            <TableColumn prefWidth="110.0" text="Payment Status" />
+            <TableColumn prefWidth="163.0" text="Reception" />
+            <TableColumn prefWidth="146.0" text="Chef" />
+            <TableColumn prefWidth="151.0" text="Deliver Boy" />
+            <TableColumn prefWidth="157.0" text="Customer" />
+         </columns>
+      </TableView>
+      <Label layoutX="856.0" layoutY="331.0" prefHeight="25.0" prefWidth="77.0" text="Order ID" />
+      <TextField fx:id="txtOrderId" layoutX="946.0" layoutY="332.0" prefHeight="25.0" prefWidth="223.0" />
+      <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="611.0" layoutY="359.0" prefHeight="25.0" prefWidth="195.0" promptText="Address" />
+      <JFXComboBox fx:id="cmbReceptionId" layoutX="570.0" layoutY="15.0" prefHeight="25.0" prefWidth="100.0" promptText="Reception ID" />
+      <JFXPasswordField fx:id="txtPassword" layoutX="680.0" layoutY="15.0" prefHeight="25.0" prefWidth="125.0" promptText="Password" />
+   </children>
+</AnchorPane>

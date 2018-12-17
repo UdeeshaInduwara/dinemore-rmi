@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-11-20T11:51:43 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MonthlyOrderCount" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="abb795a7-f485-4f7f-b815-0651a0d79bd3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Dinemore"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select count(orderId) as orderCount,month(orderDateTime) as orderMonth from orders where year(orderDateTime)=year(curdate()) group by orderMonth]]>
+	</queryString>
+	<field name="orderCount" class="java.lang.Long"/>
+	<field name="orderMonth" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="183" y="14" width="198" height="30" uuid="03b09c4f-cb58-417f-a8d4-6e30213ed6ec"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Orders Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="278" height="20" uuid="0412c289-605d-4e82-897b-b89ec9ce5f45"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[orderCount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="277" height="20" uuid="cda1816c-8379-4044-bf65-fe79ffd48d5e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[orderMonth]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="278" height="20" uuid="9eba5a5c-93ed-4d50-9e0d-2c6b703cac8c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{orderCount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="277" height="20" uuid="a61d1d08-877d-4bd8-af06-1c2ec0f07857"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{orderMonth}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

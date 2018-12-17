@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-11-20T09:34:21 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AllCustomerList" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="336f916a-310d-481d-9cc4-23586da892d8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Dinemore"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="568"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="418"/>
+	<queryString>
+		<![CDATA[select * from orders]]>
+	</queryString>
+	<field name="orderId" class="java.lang.String"/>
+	<field name="cookingEndTime" class="java.sql.Time"/>
+	<field name="cookingStartTime" class="java.sql.Time"/>
+	<field name="deliverEndTime" class="java.sql.Time"/>
+	<field name="deliverStartTime" class="java.sql.Time"/>
+	<field name="orderDateTime" class="java.sql.Timestamp"/>
+	<field name="orderStatus" class="java.lang.String"/>
+	<field name="orderType" class="java.lang.String"/>
+	<field name="paymentStatus" class="java.lang.String"/>
+	<field name="chef_chefId" class="java.lang.String"/>
+	<field name="customer_custId" class="java.lang.String"/>
+	<field name="deliverBoy_delBId" class="java.lang.String"/>
+	<field name="reception_recId" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="320" y="14" width="200" height="30" uuid="1faed0a6-c22d-47a9-8654-da15f30d669b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="30" uuid="39cf50b1-2754-4f20-a116-4b12ae724640"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[orderId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="0" width="61" height="30" uuid="fef206df-062e-4098-825a-1f997bfd63c0"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cookingEndTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="0" width="61" height="30" uuid="1b769041-09d8-4935-bd85-8999fc2f37ed"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cookingStartTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="0" width="61" height="30" uuid="260a3c42-df18-4451-a15d-de592b32514a"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[deliverEndTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="0" width="61" height="30" uuid="f9ad671c-0565-4eb1-ab10-2320ceee11f5"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[deliverStartTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="0" width="61" height="30" uuid="f7ba9689-41e7-4f64-b849-46703c05e7ad"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[orderDateTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="61" height="30" uuid="cbb6f52b-ccc7-47c1-acef-f24d3712890d"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[orderStatus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="0" width="61" height="30" uuid="5c2e8daa-e386-4b09-823e-24f0ae679f0f"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[orderType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="0" width="61" height="30" uuid="38d32556-c67d-480e-b3c9-4ef0bdc77272"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[paymentStatus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="558" y="0" width="61" height="30" uuid="36b5f0e6-a293-41e0-a8f5-d3fd4900ccc9"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[chef_chefId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="619" y="0" width="61" height="30" uuid="b4bab8f3-cfd5-4100-84b5-f29c0f743f23"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[customer_custId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="0" width="61" height="30" uuid="099ea013-ae2a-4b9b-a435-db103dc5d72a"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[deliverBoy_delBId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="741" y="0" width="61" height="30" uuid="1afffb57-964d-4d8c-9182-18f45396619d"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[reception_recId]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="7" width="70" height="30" uuid="6e0f5e9f-8dc5-44bf-9802-012ac4e4ae29"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="7" width="61" height="30" uuid="56f67159-4aa3-47ec-846d-7b3fbc69412f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cookingEndTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="7" width="61" height="30" uuid="921d1d6a-7280-430c-971f-0df426ac4df3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cookingStartTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="7" width="61" height="30" uuid="32860c3e-01ce-45b3-ba77-894295edfe00"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deliverEndTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="7" width="61" height="30" uuid="8fa5559a-6e9a-404a-a295-ed4c1893663c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deliverStartTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="7" width="61" height="30" uuid="47fca8bd-ffbc-4f62-ae42-540bbc06c7c1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderDateTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="7" width="61" height="30" uuid="f33114b1-416f-4755-a20a-14fc3aa2b85b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="7" width="61" height="30" uuid="088f22a5-a332-4d07-9d08-d7e10c00d6dd"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="7" width="61" height="30" uuid="f5e006cc-0676-4830-91f6-b1cf95e61753"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paymentStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="558" y="7" width="61" height="30" uuid="b906c80b-81a7-48cd-b2b0-d42778f8834e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chef_chefId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="619" y="7" width="61" height="30" uuid="1de562ec-fec0-4029-b0e5-5349a225f2ce"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_custId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="7" width="61" height="30" uuid="2ab7c9ac-759d-4e33-9e7d-dff03b3d0bcb"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deliverBoy_delBId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="741" y="7" width="61" height="30" uuid="d1399741-7dcf-42ef-b6a7-89aa543a1400"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reception_recId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
